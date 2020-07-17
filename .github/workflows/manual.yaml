@@ -1,0 +1,20 @@
+name: Manual Test
+
+on:
+    workflow_dispatch:
+        inputs:
+            param1:
+                description: 'Param 1'
+                required: true
+                default: 'param1'
+
+jobs:
+    Test-Jobs:
+        runs-on:
+            - ubuntu-latest
+        steps:
+            - name: Echo test
+              run: |
+                  echo ${{ github.event.inputs.scheme }}
+                  uname -a
+                  ps -A
