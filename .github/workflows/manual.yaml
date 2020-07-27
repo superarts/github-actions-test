@@ -13,6 +13,11 @@ jobs:
         runs-on:
             - ubuntu-latest
         steps:
+            - name: Checkout Project
+              uses: actions/checkout@v2
+              with:
+                fetch-depth: 0
+
             - name: Echo test
               run: |
                   echo ${{ github.event.inputs.param1 }}
