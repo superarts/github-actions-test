@@ -20,3 +20,8 @@ jobs:
                   # ps -A
                   echo ${GITHUB_REF#refs/heads/}
                   echo ${GITHUB_REF}
+                  git branch -a
+                  git branch --show-current
+                  git checkout ${GITHUB_REF}
+                  git branch -a
+                  git branch --show-current
