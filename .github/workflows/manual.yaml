@@ -17,4 +17,6 @@ jobs:
               run: |
                   echo ${{ github.event.inputs.scheme }}
                   uname -a
-                  ps -A
+                  # ps -A
+                  echo ${GITHUB_REF#refs/heads/}
+                  echo ${GITHUB_REF}
