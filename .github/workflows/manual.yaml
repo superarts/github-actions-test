@@ -15,7 +15,7 @@ jobs:
         steps:
             - name: Echo test
               run: |
-                  echo ${{ github.event.inputs.scheme }}
+                  echo ${{ github.event.inputs.param1 }}
                   uname -a
                   # ps -A
                   echo ${GITHUB_REF#refs/heads/}
