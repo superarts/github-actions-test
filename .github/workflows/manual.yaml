@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
         inputs:
             param1:
-                description: 'Param 1'
+                description: 'Param 1 main'
                 required: true
                 default: 'param1'
 
@@ -25,8 +25,11 @@ jobs:
                   # ps -A
                   echo ${GITHUB_REF#refs/heads/}
                   echo ${GITHUB_REF}
+                  echo ----
                   git branch -a
                   git branch --show-current
+                  echo ----
                   git checkout ${GITHUB_REF}
+                  echo ----
                   git branch -a
                   git branch --show-current
